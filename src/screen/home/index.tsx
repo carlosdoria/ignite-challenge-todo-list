@@ -1,16 +1,12 @@
-import { View, Text, StatusBar } from "react-native";
+import { View, Text, SafeAreaView } from "react-native";
+import { Header } from "../../components/Header";
 
 type screenProps = {};
 
 export function Home({}: screenProps) {
   return (
-    <View>
-      <StatusBar
-        barStyle="light-content"
-        backgroundColor="transparent"
-        translucent
-      />
-      <Text>Home</Text>
-    </View>
+    <SafeAreaView>
+      <Header />
+    </SafeAreaView>
   );
 }
