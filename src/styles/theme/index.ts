@@ -22,5 +22,9 @@ export const THEME = {
     REGULAR: "Roboto_400Regular",
     BOLD: "Roboto_700Bold",
   },
-  BORDER_RADIUS: 6,
+  BORDER_RADIUS: {
+    ROUNDED_SM: 6,
+    ROUNDED_MD: 8,
+    ROUNDED_FULL: 999,
+  },
 };

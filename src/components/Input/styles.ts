@@ -19,7 +19,7 @@ export const styles = StyleSheet.create({
     color: THEME.COLORS.GRAY_100,
     fontSize: THEME.FONT_SIZE.LG,
 
-    borderRadius: THEME.BORDER_RADIUS,
+    borderRadius: THEME.BORDER_RADIUS.ROUNDED_SM,
     backgroundColor: THEME.COLORS.GRAY_500,
   },
   button: {
@@ -30,6 +30,6 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
 
     backgroundColor: THEME.COLORS.BLUE_DARK,
-    borderRadius: THEME.BORDER_RADIUS,
+    borderRadius: THEME.BORDER_RADIUS.ROUNDED_SM,
   },
 });

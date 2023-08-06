@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
     paddingVertical: 2,
     paddingHorizontal: 8,
 
-    borderRadius: 999,
+    borderRadius: THEME.BORDER_RADIUS.ROUNDED_FULL,
 
     fontSize: THEME.FONT_SIZE.SM,
     color: THEME.COLORS.GRAY_200,
