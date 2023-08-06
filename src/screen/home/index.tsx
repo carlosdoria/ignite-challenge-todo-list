@@ -1,15 +1,14 @@
-import { View, Text, SafeAreaView, Alert } from "react-native";
+import { View, Text, SafeAreaView, Alert, FlatList } from "react-native";
 import { Header } from "../../components/Header";
 import { Input } from "../../components/Input";
 import { useState } from "react";
 import { Counter } from "../../components/Counter";
 import { styles } from "./styles";
+import { ITask, TaskList } from "../../components/TaskList";
 
-type screenProps = {};
-
-export function Home({}: screenProps) {
+export function Home() {
   const [newTaskState, setNewTaskState] = useState("");
-  const [tasksState, setTasksState] = useState<String[]>([]);
+  const [tasksState, setTasksState] = useState<ITask[]>([]);
 
   // TODO: add reduce to count completed tasks
 
@@ -20,7 +19,10 @@ export function Home({}: screenProps) {
     }
 
     try {
-      setTasksState([...tasksState, newTaskState]);
+      setTasksState([
+        ...tasksState,
+        { name: newTaskState, isCompleted: false },
+      ]);
       setNewTaskState("");
 
       Alert.alert("Tarefa.", "Tarefa adicionada com sucesso.");
@@ -42,7 +44,8 @@ export function Home({}: screenProps) {
         <Counter text="Criados" counter={tasksState.length} />
         <Counter text="Concluidos" counter={2} color="purple" />
       </View>
-      {/* <TaskList/> */}
+
+      <TaskList tasks={tasksState} />
     </SafeAreaView>
   );
 }
