@@ -19,6 +19,7 @@ export const styles = StyleSheet.create({
     color: THEME.COLORS.GRAY_100,
     fontSize: THEME.FONT_SIZE.LG,
 
+    borderWidth: 1,
     borderRadius: THEME.BORDER_RADIUS.ROUNDED_SM,
     backgroundColor: THEME.COLORS.GRAY_500,
   },
